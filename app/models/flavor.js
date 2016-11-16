@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  name: DS.attr();
-  sodas: DS.hasMany('soda');
+  name: DS.attr('string'),
+  sodas: DS.hasMany('soda')
 });
