@@ -1,5 +1,8 @@
 <h2>emberx-select</h2>
 <form>
+  {{#each flavor as |flav|}}
+    {{flavor.name}}
+  {{/each}}
   <label>Name:</label>
   {{input type='text' value=soda.name}}
   <label>Flavor:</label>
