@@ -109,3 +109,15 @@ nav a:focus {
     top: 0%;
     opacity: 1;
 }
+
+.select-list li {
+  display:inline;
+  list-style-type: none;
+}
+
+.select-list div {
+  display:inline;
+}
+
+.select-list-items {
+}

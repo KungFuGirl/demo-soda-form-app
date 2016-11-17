@@ -1,0 +1,16 @@
+<nav class='cl-effect-7' id='cl-effect-7'>
+  <ul class="select-list">
+    <li class="select-list-item">{{demo-link linkText="Native HTML" demoComponentName="native-html" updateDisplayDemo=(action "updateCurrentSelectDemo")}} | </li>
+    <li class="select-list-item">{{demo-link linkText="EmberX-Select" demoComponentName="emberx-select" updateDisplayDemo=(action "updateCurrentSelectDemo")}} | </li>
+    <li class="select-list-item">{{demo-link linkText="Ember Power Select" demoComponentName="power-select" updateDisplayDemo=(action "updateCurrentSelectDemo")}}</li>
+  </ul>
+</nav>
+<section id='soda-form'>
+  {{#if isNativeHtml}}
+    {{native-html newSoda=newSoda}}
+  {{else if isEmberxSelect}}
+    {{emberx-select newSoda=newSoda}}
+  {{else if isPowerSelect}}
+    {{power-select newSoda=newSoda}}
+  {{/if}}
+</section>
