@@ -1,24 +1,30 @@
 import Ember from 'ember';
  
-let flavors = [{
-  id: 1,
-  name: "cherry"
-},{
-  id: 2,
-  name: "cream"
-},{
-  id: 3,
-  name: "orange"
-},{
-  id: 4,
-  name: "rootbeer"
-}];
-
 export default Ember.Route.extend({
+  init() {
+    this.get('store').push({
+      data: [{
+        id: 1,
+        type: "flavor",
+        attributes: {
+          name: "cherry"
+        }
+      },{
+        id: 2,
+        type: "flavor",
+        attributes: {
+          name: "cream"
+        }
+      }, {
+        id: 3,
+        type: "flavor",
+        attributes: {
+          name: "rootbeer"
+        }
+      }]
+    });
+  },
   model() {
     return this.get('store').createRecord('soda');
-  },
-  flavors() {
-    return flavors;
   }
 });
