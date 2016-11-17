@@ -7,9 +7,11 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('power-select');
-  this.route('html-native');
-  this.route('emberx-select');
+  this.route('demo', function() {
+    this.route('power-select');
+    this.route('html-native');
+    this.route('emberx-select');
+  });
 });
 
 export default Router;
