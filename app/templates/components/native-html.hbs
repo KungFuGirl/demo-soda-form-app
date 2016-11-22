@@ -1,7 +1,10 @@
-<h2>Soda form. Select-demo comoponent rendering</h2>
 <form>
   <label>Name:</label>
   {{input type='text' value=newSoda.name}}
   <label>Flavor:</label>
-  <select></select>
+  <select onchange={{action 'setFlavor' value="target.value"}}>
+    {{#each flavors as |flavorChoice|}}
+      <option value={{flavorChoice.id}} selected={{eq flavor flavorChoice}}>{{flavorChoice.name}}</option>
+    {{/each}}
+  </select>
 </form>

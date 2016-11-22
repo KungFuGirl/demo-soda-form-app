@@ -5,5 +5,10 @@ export default Ember.Component.extend({
   init() {
     this._super(...arguments);
     this.set('flavors', this.get('store').peekAll('flavor'));
-  }
+  },
+  actions: {
+      setFlavor(flavor) {
+        this.set('newSoda.flavor', flavor);
+      }
+   }
 });
